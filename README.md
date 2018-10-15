@@ -42,6 +42,10 @@ Step 2. Add the dependency
 </dependency>
 ```
 ## 类介绍
+ + ActivityManager：活动管理
+ + DateUtil：时间信息
+ + NetUtil：网络检查工具类
+ + SPUtils：sharepreference管理
  + Averager： 均值器， 添加一些列数字或时间戳，获取其均值。
  + Base64： Base64， 兼容到android1.0版本的Base64编解码器。
  + Check： 检测类， 检测各种对象是否为null或empty。
