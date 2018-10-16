@@ -22,9 +22,12 @@ public class LogUtils {
 	public static final int WARN = 4;
 	public static final int ERROR = 5;
 	public static final int NOTHING = 6;
-	public static final int LEVEL = INFO;
+	public static int LEVEL = INFO;
 	public static final String SEPARATOR = ",";
 
+	public 	static void setLEVEL(int level){
+		LEVEL=level;
+	}
 	public static void v(String message) {
 		if (LEVEL <= VERBOSE) {
 			StackTraceElement stackTraceElement = Thread.currentThread()
