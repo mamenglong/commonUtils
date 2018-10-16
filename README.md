@@ -39,7 +39,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.mamenglong</groupId>
     <artifactId>commonUtils</artifactId>
-    <version>Tag</version>
+    <version>v1.0</version>
 </dependency>
 ```
 ## 类介绍
