@@ -10,21 +10,24 @@ import android.content.Context;
  * @date 2018/10/15
  * 修改时间：2018/10/15 13:36
  */
-public class MyApplication extends Application {
-    private static Context context;
+public class UtilsApplication extends Application {
+    /**
+     * Global application context.
+     */
+    static Context context;
     private static Application application;
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        if(context==null){
-            context=getApplicationContext();
-        }
-        if(application==null)
-        {
-            application=this;
-        }
+
+   public UtilsApplication(){
+        context=this;
+    }
+    public static void initialize(Context context) {
+        UtilsApplication.context= context;
     }
     public static Context getContext() {
+        if(context==null)
+        {
+            throw new RuntimeException("Application context is null.");
+        }
         return context;
     }
     public static Application getApplication(){
