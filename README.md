@@ -67,6 +67,7 @@ Of course you may have your own Application and has already configured here, lik
 </manifest>
 That's OK. Utils  can still live with that. Just call UtilsApplication.initialize(context) in your own Application:
 
+```java
 public class MyOwnApplication extends Application {
 
     @Override
@@ -74,24 +75,36 @@ public class MyOwnApplication extends Application {
         super.onCreate();
         UtilsApplication.initialize(this);
     }
-    ...
 }
+```
 
 Make sure to call this method as early as you can. In the onCreate() method of Application will be fine. And always remember to use the application context as parameter. Do not use any instance of activity or service as parameter, or memory leaks might happen.
 
 目录结构：
 -----java
+
 ------com.mml.utilslibrary
+
 -------android
+
 --------widget
+
 ----------...
+
 -------common
+
 --------assist
+
 --------data
+
 --------io
+
 --------receiver
+
 --------service
+
 --------utils
+
 -------
 ## 类介绍
  + android
@@ -104,6 +117,7 @@ Make sure to call this method as early as you can. In the onCreate() method of A
    + ClearEditText:带清除按钮的EditText
    + CountdownView:验证码倒计时
    + SimpleLayout:简单的Layout
+   + ExpandableListView 添加带动画的ExpandableListView
  + common-assist
    + Averager： 均值器， 添加一些列数字或时间戳，获取其均值。
    + Base64： Base64， 兼容到android1.0版本的Base64编解码器。
